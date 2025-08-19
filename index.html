@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - IIT Express</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #8E2DE2;
+            --secondary: #4A00E0;
+            --accent: #00C9FF;
+            --dark: #141E30;
+            --light: #f8f9fa;
+            --text: #333;
+            --text-light: #e0e0e0;
+            --success: #00b09b;
+            --warning: #FFD700;
+            --danger: #FF416C;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 1.2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            margin-right: 10px;
+            font-size: 2.5rem;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #4776E6 0%, #8E54E9 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 80px;
+            z-index: 99;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0.5rem 0;
+        }
+
+        .nav-item {
+            padding: 0.8rem 1.4rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            color: white;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-bottom: 3px solid var(--warning);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(142, 45, 226, 0.4);
+    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(142, 45, 226, 0.4);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.4s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2.2rem;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            border-left: 5px solid var(--warning);
+        }
+
+        .section:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.8rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            color: var(--warning);
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            font-size: 1.6rem;
+        }
+
+        /* About Content */
+        .about-content {
+            text-align: center;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: linear-gradient(135deg, #1c92d2 0%, #7b4397 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            color: white;
+        }
+
+        .member-name {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .member-role {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .member-bio {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Mission Section */
+        .mission-statement {
+            background: linear-gradient(135deg, rgba(28, 146, 210, 0.1), rgba(123, 67, 151, 0.1));
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--success);
+        }
+
+        .mission-statement p {
+            font-style: italic;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark), #243B55);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content p {
+            margin: 1rem 0;
+            opacity: 0.9;
+        }
+
+        .footer-content p:first-child {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-item {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeIn 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="logo">
+                    <span>🚆</span> IIT Express
+                </div>
+                <p class="tagline">Accelerate your JEE & NEET preparation with premium resources</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> About IIT Express</h2>
+            <div class="about-content">
+                <p>IIT Express is a premier platform dedicated to helping JEE and NEET aspirants achieve their dreams. We provide high-quality study materials, tests, and resources curated by experts to ensure your preparation is efficient and effective.</p>
+                <p>Our mission is to make quality education accessible to every student, regardless of their background or location. We believe that with the right guidance and resources, every student can excel in these competitive exams.</p>
+                  <a href="main.html" class="btn">Explore Our Content</a>
+            </div>
+
+            <div class="mission-statement">
+                <p>"Empowering the next generation of engineers and doctors through innovative learning solutions and comprehensive resources."</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-users"></i> Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Devansh</h3>
+                    <p class="member-role">Co-Founder & Content Head</p>
+                    <p class="member-bio">Devansh is passionate about education technology and has extensive experience in curating study materials for competitive exams. He ensures that all content on IIT Express meets the highest quality standards.</p>
+                    <div class="social-links">
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="member-name">Tijil</h3>
+                    <p class="member-role">Founder & Technology Head</p>
+                    <p class="member-bio">Tijil is the tech wizard behind IIT Express, with expertise in developing educational platforms. He focuses on creating seamless user experiences and implementing innovative features.</p>
+                    <div class="social-links">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-bullseye"></i> Our Mission</h2>
+            <div class="about-content">
+                <p>At IIT Express, we are committed to democratizing quality education for JEE and NEET aspirants. We understand the challenges students face in accessing reliable study materials and guidance.</p>
+                <p>Our platform brings together the best resources, expert guidance, and a supportive community to help you navigate your preparation journey with confidence.</p>
+                <p>We continuously update our content to align with the latest exam patterns and trends, ensuring that you always have access to the most relevant preparation materials.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>🚆 IIT Express - Your Journey to IIT Starts Here</p>
+            <p>© 2025 IIT Express. All rights reserved.</p>
+            <p>Designed for JEE & NEET Aspirants</p>
+        </div>
+    </footer>
+</body>
+</html>
