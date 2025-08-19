@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Advanced Mini Test - 15 Questions</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/zXVLNBs0/6120894624269714295.jpg">
+    <style>
+      /* Test Styles for IIT Express */
+body {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: #e0e0e0;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.test-container {
+    border: 2px solid #8E54E9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(142, 84, 233, 0.5), inset 0 0 10px rgba(142, 84, 233, 0.3);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+h1, h2 {
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    text-align: center;
+}
+
+.subject-section {
+    margin: 25px 0;
+    padding: 15px;
+    border-left: 3px solid #00C9FF;
+    box-shadow: -5px 0 10px rgba(0, 201, 255, 0.3);
+    background: rgba(30, 45, 100, 0.5);
+}
+
+.question {
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(40, 60, 120, 0.4);
+    border-radius: 5px;
+    border-bottom: 1px solid #4776E6;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+label:hover {
+    color: #00C9FF;
+    text-shadow: 0 0 5px rgba(0, 201, 255, 0.5);
+}
+
+input[type="radio"] {
+    accent-color: #8E2DE2;
+    margin-right: 10px;
+}
+
+button {
+    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(142, 45, 226, 0.5);
+}
+
+button:hover {
+    box-shadow: 0 0 25px rgba(142, 45, 226, 0.7), 0 0 35px rgba(74, 0, 224, 0.5);
+    transform: scale(1.05);
+}
+
+#result {
+    display: none;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #00C9FF;
+    box-shadow: 0 0 20px rgba(0, 201, 255, 0.4);
+    text-align: center;
+    margin-top: 30px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(0, 201, 255, 0.4); }
+    to { box-shadow: 0 0 20px rgba(0, 201, 255, 0.6), 0 0 30px rgba(0, 180, 255, 0.4); }
+}
+
+#score {
+    font-size: 28px;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.chapter {
+    font-size: 14px;
+    color: #00b09b;
+    font-style: italic;
+}
+
+.correct-answer {
+    color: #00b09b;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    color: #FF416C;
+    text-decoration: line-through;
+}
+
+.answer-details {
+    margin-top: 20px;
+    text-align: left;
+    border-top: 1px solid #4776E6;
+    padding-top: 15px;
+}
+
+.question-review {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(40, 60, 120, 0.4);
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>JEE Advanced Mini Test</h1>
+        <h2>15 Questions (5 from each subject)</h2>
+        
+        <form id="testForm">
+            <!-- Physics Section -->
+            <div class="subject-section" id="physics-section">
+                <h3>Physics</h3>
+                
+                <div class="question">
+                    <p>1. A particle moves along x-axis with acceleration a = 6(t - 1). If it starts from rest at t=0, velocity at t=2s is: <span class="chapter">(Kinematics)</span></p>
+                    <label><input type="radio" name="q1" value="a"> a) 0 m/s</label>
+                    <label><input type="radio" name="q1" value="b"> b) 1 m/s</label>
+                    <label><input type="radio" name="q1" value="c"> c) 3 m/s</label>
+                    <label><input type="radio" name="q1" value="d"> d) 6 m/s</label>
+                </div>
+                
+                <div class="question">
+                    <p>2. A block of mass 5 kg is suspended by two strings at 30° and 60°. Tension at 60° is: <span class="chapter">(Laws of Motion)</span></p>
+                    <label><input type="radio" name="q2" value="a"> a) 25 N</label>
+                    <label><input type="radio" name="q2" value="b"> b) 25√3 N</label>
+                    <label><input type="radio" name="q2" value="c"> c) 50 N</label>
+                    <label><input type="radio" name="q2" value="d"> d) 50√3 N</label>
+                </div>
+                
+                <div class="question">
+                    <p>3. The dimensional formula for surface tension is: <span class="chapter">(Units & Measurements)</span></p>
+                    <label><input type="radio" name="q3" value="a"> a) [MLT<sup>-2</sup>]</label>
+                    <label><input type="radio" name="q3" value="b"> b) [ML<sup>0</sup>T<sup>-2</sup>]</label>
+                    <label><input type="radio" name="q3" value="c"> c) [ML<sup>-1</sup>T<sup>-2</sup>]</label>
+                    <label><input type="radio" name="q3" value="d"> d) [M<sup>2</sup>LT<sup>-1</sup>]</label>
+                </div>
+                
+                <div class="question">
+                    <p>4. A projectile has maximum range 200m. Its maximum height at 30° launch is: <span class="chapter">(Kinematics)</span></p>
+                    <label><input type="radio" name="q4" value="a"> a) 25 m</label>
+                    <label><input type="radio" name="q4" value="b"> b) 50 m</label>
+                    <label><input type="radio" name="q4" value="c"> c) 75 m</label>
+                    <label><input type="radio" name="q4" value="d"> d) 100 m</label>
+                </div>
+                
+                <div class="question">
+                    <p>5. A capillary tube of radius r has water rise to height h. If radius becomes 2r, mass of water risen becomes: <span class="chapter">(Properties of Matter)</span></p>
+                    <label><input type="radio" name="q5" value="a"> a) Same</label>
+                    <label><input type="radio" name="q5" value="b"> b) Half</label>
+                    <label><input type="radio" name="q5" value="c"> c) Double</label>
+                    <label><input type="radio" name="q5" value="d"> d) Four times</label>
+                </div>
+            </div>
+            
+            <!-- Chemistry Section -->
+            <div class="subject-section" id="chemistry-section">
+                <h3>Chemistry</h3>
+                
+                <div class="question">
+                    <p>6. The ratio of radii of 2nd orbit of He⁺ to 3rd orbit of Li²⁺ is: <span class="chapter">(Atomic Structure)</span></p>
+                    <label><input type="radio" name="q6" value="a"> a) 2:3</label>
+                    <label><input type="radio" name="q6" value="b"> b) 3:2</label>
+                    <label><input type="radio" name="q6" value="c"> c) 4:9</label>
+                    <label><input type="radio" name="q6" value="d"> d) 9:4</label>
+                </div>
+                
+                <div class="question">
+                    <p>7. Which is NOT a Dobereiner's triad? <span class="chapter">(Periodic Table)</span></p>
+                    <label><input type="radio" name="q7" value="a"> a) Li, Na, K</label>
+                    <label><input type="radio" name="q7" value="b"> b) Ca, Sr, Ba</label>
+                    <label><input type="radio" name="q7" value="c"> c) Cl, Br, I</label>
+                    <label><input type="radio" name="q7" value="d"> d) Fe, Co, Ni</label>
+                </div>
+                
+                <div class="question">
+                    <p>8. The IUPAC name of [Co(NH₃)₅Cl]Cl₂ is: <span class="chapter">(Coordination Compounds)</span></p>
+                    <label><input type="radio" name="q8" value="a"> a) Pentaamminechlorocobalt(III) chloride</label>
+                    <label><input type="radio" name="q8" value="b"> b) Pentaamminechlorocobalt(II) chloride</label>
+                    <label><input type="radio" name="q8" value="c"> c) Pentachloraminecobalt(III) chloride</label>
+                    <label><input type="radio" name="q8" value="d"> d) Pentaamminecobalt(III) dichloride</label>
+                </div>
+                
+                <div class="question">
+                    <p>9. Number of significant figures in 0.0025 is: <span class="chapter">(Basic Concepts)</span></p>
+                    <label><input type="radio" name="q9" value="a"> a) 1</label>
+                    <label><input type="radio" name="q9" value="b"> b) 2</label>
+                    <label><input type="radio" name="q9" value="c"> c) 3</label>
+                    <label><input type="radio" name="q9" value="d"> d) 4</label>
+                </div>
+                
+                <div class="question">
+                    <p>10. The element with atomic number 56 belongs to: <span class="chapter">(Periodic Table)</span></p>
+                    <label><input type="radio" name="q10" value="a"> a) s-block</label>
+                    <label><input type="radio" name="q10" value="b"> b) p-block</label>
+                    <label><input type="radio" name="q10" value="c"> c) d-block</label>
+                    <label><input type="radio" name="q10" value="d"> d) f-block</label>
+                </div>
+            </div>
+            
+            <!-- Mathematics Section -->
+            <div class="subject-section" id="maths-section">
+                <h3>Mathematics</h3>
+                
+                <div class="question">
+                    <p>11. Number of equivalence relations containing (1,2) on set A={1,2,3} is: <span class="chapter">(Relations)</span></p>
+                    <label><input type="radio" name="q11" value="a"> a) 1</label>
+                    <label><input type="radio" name="q11" value="b"> b) 2</label>
+                    <label><input type="radio" name="q11" value="c"> c) 3</label>
+                    <label><input type="radio" name="q11" value="d"> d) 4</label>
+                </div>
+                
+                <div class="question">
+                    <p>12. Value of sin(π/14)sin(3π/14)sin(5π/14) is: <span class="chapter">(Trigonometry)</span></p>
+                    <label><input type="radio" name="q12" value="a"> a) 1/8</label>
+                    <label><input type="radio" name="q12" value="b"> b) 1/16</label>
+                    <label><input type="radio" name="q12" value="c"> c) √3/8</label>
+                    <label><input type="radio" name="q12" value="d"> d) √3/16</label>
+                </div>
+                
+                <div class="question">
+                    <p>13. If n(A)=12, n(B)=17, n(A∪B)=21, then n(A∩B) is: <span class="chapter">(Sets)</span></p>
+                    <label><input type="radio" name="q13" value="a"> a) 5</label>
+                    <label><input type="radio" name="q13" value="b"> b) 8</label>
+                    <label><input type="radio" name="q13" value="c"> c) 12</label>
+                    <label><input type="radio" name="q13" value="d"> d) 17</label>
+                </div>
+                
+                <div class="question">
+                    <p>14. General solution of sinx + sin5x = sin3x is: <span class="chapter">(Trigonometry)</span></p>
+                    <label><input type="radio" name="q14" value="a"> a) nπ/3</label>
+                    <label><input type="radio" name="q14" value="b"> b) nπ/2</label>
+                    <label><input type="radio" name="q14" value="c"> c) nπ/4</label>
+                    <label><input type="radio" name="q14" value="d"> d) nπ/6</label>
+                </div>
+                
+                <div class="question">
+                    <p>15. If f(x) = sin²x + sin²(x+π/3) + cosx cos(x+π/3), then f'(π/6) is: <span class="chapter">(Functions)</span></p>
+                    <label><input type="radio" name="q15" value="a"> a) 0</label>
+                    <label><input type="radio" name="q15" value="b"> b) 1</label>
+                    <label><input type="radio" name="q15" value="c"> c) -1</label>
+                    <label><input type="radio" name="q15" value="d"> d) 2</label>
+                </div>
+            </div>
+            
+            <button type="button" onclick="calculateScore()">Submit Test</button>
+            
+            <div id="result">
+                <h2>Test Results</h2>
+                <p id="score">Your score: 0/60</p>
+                <div id="breakdown"></div>
+                <div class="answer-details" id="answerDetails"></div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Answer key with explanations
+        const answerKey = {
+            q1: {correct: "a", explanation: "Integrate a = 6(t-1) to get v = 3(t-1)² + C. At t=0, v=0 ⇒ C=-3. At t=2, v=0 m/s"},
+            q2: {correct: "a", explanation: "Vertical equilibrium: T₁sin30° + T₂sin60° = 50N. Horizontal: T₁cos30° = T₂cos60°. Solving gives T₂=25N"},
+            q3: {correct: "b", explanation: "Surface tension = Force/Length = [MLT⁻²]/[L] = [ML⁰T⁻²]"},
+            q4: {correct: "b", explanation: "Rmax = u²/g = 200m ⇒ u²=2000. H at 30° = (u²sin²30°)/2g = (2000×0.25)/20 = 50m"},
+            q5: {correct: "c", explanation: "Mass ∝ r×h. Since h ∝ 1/r, mass becomes double when radius doubles"},
+            q6: {correct: "b", explanation: "Radius r ∝ n²/Z ⇒ (4/2):(9/3) = 3:2"},
+            q7: {correct: "d", explanation: "Fe, Co, Ni don't show triadic relationship in atomic masses"},
+            q8: {correct: "a", explanation: "Cobalt is in +3 oxidation state with 5 NH₃ and 1 Cl ligand"},
+            q9: {correct: "b", explanation: "Only 2 and 5 are significant in 0.0025"},
+            q10: {correct: "a", explanation: "Atomic number 56 is Ba which is in s-block (6th period)"},
+            q11: {correct: "b", explanation: "Two possible equivalence relations: {(1,1),(2,2),(3,3),(1,2),(2,1)} and universal relation"},
+            q12: {correct: "a", explanation: "Using identity sinx sin(60°-x) sin(60°+x) = sin3x/4 with x=π/14 gives 1/8"},
+            q13: {correct: "b", explanation: "n(A∩B) = n(A)+n(B)-n(A∪B) = 12+17-21 = 8"},
+            q14: {correct: "a", explanation: "Using sinA+sinB=2sin((A+B)/2)cos((A-B)/2) gives solutions at x=nπ/3"},
+            q15: {correct: "a", explanation: "f(x) simplifies to 5/4 + (cos2x)/2 ⇒ f'(x)=-sin2x ⇒ f'(π/6)=-sin(π/3)=-√3/2"}
+        };
+
+        function calculateScore() {
+            let score = 0;
+            let correct = 0;
+            let wrong = 0;
+            let unanswered = 0;
+            let answerDetailsHTML = "<h3>Question-wise Analysis:</h3>";
+            
+            // Hide all questions
+            document.getElementById("physics-section").style.display = "none";
+            document.getElementById("chemistry-section").style.display = "none";
+            document.getElementById("maths-section").style.display = "none";
+            
+            // Calculate score and prepare answer details
+            for (let i = 1; i <= 15; i++) {
+                const questionName = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                const correctAnswer = answerKey[questionName].correct;
+                
+                answerDetailsHTML += `<div class="question-review">`;
+                answerDetailsHTML += `<p><strong>Q${i}:</strong> ${document.querySelector(`input[name="${questionName}"]`).parentElement.parentElement.querySelector('p').textContent}</p>`;
+                
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswer) {
+                        score += 4;
+                        correct++;
+                        answerDetailsHTML += `<p class="correct-answer">✓ Your answer (${selectedOption.value}) is correct (+4)</p>`;
+                    } else {
+                        score -= 1;
+                        wrong++;
+                        answerDetailsHTML += `<p class="wrong-answer">✗ Your answer (${selectedOption.value}) is wrong (-1)</p>`;
+                        answerDetailsHTML += `<p class="correct-answer">Correct answer: ${correctAnswer}</p>`;
+                    }
+                } else {
+                    unanswered++;
+                    answerDetailsHTML += `<p>Not attempted (0)</p>`;
+                    answerDetailsHTML += `<p class="correct-answer">Correct answer: ${correctAnswer}</p>`;
+                }
+                
+                answerDetailsHTML += `<p><em>Explanation:</em> ${answerKey[questionName].explanation}</p>`;
+                answerDetailsHTML += `</div>`;
+            }
+            
+            document.getElementById("score").textContent = `Your score: ${score}/60`;
+            document.getElementById("breakdown").innerHTML = 
+                `<p><span style="color:#00ff88">Correct: ${correct}</span> | 
+                 <span style="color:#ff5555">Wrong: ${wrong}</span> | 
+                 Unattempted: ${unanswered}</p>`;
+            
+            document.getElementById("answerDetails").innerHTML = answerDetailsHTML;
+            document.getElementById("result").style.display = "block";
+            
+            // Scroll to results
+            document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
